@@ -1,8 +1,11 @@
 # Threads
 
-    * What exactly is a thread?
-        * An instance of Java class *java.lang.Thread* 
-        * Thread of execution
+* What exactly is a thread? <br/>
+
+    * An instance of Java class *java.lang.Thread* 
+    * Thread of execution
 
     Each thread a call stack or each call stack a thread
     
+* Making a thread
+    
