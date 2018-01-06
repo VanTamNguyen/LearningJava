@@ -9,4 +9,14 @@
     * Each thread a call stack or each call stack a thread
     
 #### Making a thread
-    
+* Extend the class *java.lang.Thread*
+* Implement *Runnable* interface
+
+#### Threads scheduler
+
+
+#### Thread states and Transition
+
+
+
+#### Threads synchronization 
