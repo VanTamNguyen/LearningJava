@@ -69,6 +69,8 @@ Thread Scheduler is the part of the JVM (although most of JVMs map Java theads d
 
 
 #### Thread States and Transitions
+<p align="center"><img src="/images/thread_state.png" /></p>
+
 A thread can only be in one of five states:
 * ***New***
 * ***Runnable***
