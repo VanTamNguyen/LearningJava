@@ -69,12 +69,12 @@ Thread Scheduler is the part of the JVM (although most of JVMs map Java theads d
 
 
 #### Thread States and Transitions
-<p align="center"><img src="/images/thread_state.png" /></p>
+<p align="center"><img src="/images/thread_states.png" /></p>
 
 A thread can only be in one of five states:
-* ***New***
-* ***Runnable***
-* ***Running***
+* ***New***, a thread is said in *new* state when an instance of java class Thread is created but not yet call ```start()``` method. In this point, it's a live ```Thread``` object but not yet a thread of execution. It's considered not alive.
+* ***Runnable***, when the method ```start()``` is called, the thread will moves to ```runnable``` state. At this state, the thread will have chance to be picked up be Thread Scheduler to move to ```running``` state. But a thread can also return to ```runnable``` state after entering ```running``` state or comming back from ```blocked/waiting/sleeping``` state. 
+* ***Running*** 
 * ***Waiting/Blocked/Sleeping***
 * ***Dead***
 
