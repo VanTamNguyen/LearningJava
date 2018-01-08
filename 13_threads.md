@@ -4,7 +4,7 @@
 #### What exactly is a thread?
 
 * An instance of Java class *java.lang.Thread* 
-    * Like every other objects in Java, Thread objects have variables and method, live and die at heap memory.
+    * Like every other objects in Java, Thread objects have variables and method, live and die at heap memory
 * Thread of execution
     * A lightweight process that has its own call stack
     * Each thread a call stack or each call stack a thread
@@ -21,6 +21,7 @@
             // New thead will execute code here
         }
         
+        // The overloaded method
         public void run(String string) {
         }
     }
@@ -51,7 +52,7 @@
     
 
 #### Starting Thread
-To start a thread you have to call ```thread.start();```. This mothod call will start a new call stack. To summarize, following are the things happen when you call thread start:
+To start a thread you have to call ```thread.start();```. This method call will start a new call stack. To summarize, following are the things happen when you call thread start:
 * A new thread of execution starts (with a new call stack)
 * Thread moves from *new* state to *runnable* state
 * When the thread has chance to run (by the thread scheduler), its target run method will run and thread moves to *running* state.
@@ -78,6 +79,8 @@ A thread can only be in one of five states:
 * ***Waiting/Blocked/Sleeping***, this is the state when a thread is not eligible to run. In other words, it's not runnable but it might return to runnable if a particular event occurs. A thread may be *blocked* waiting for a resource (such as IO or an object lock). A thread may be *sleeping* because the thread's run code tell it to sleep a period of time. A thread can be waiting because the thread's run code causes it to wait. The important point is that one thread does not tell the others to block. 
 * ***Dead***, a thread is called *dead* when the run method completes. 
 
+#### Interupts
+
 #### sleep()
 The ```sleep()``` method is a static method of class ```java.lang.Thread```. It is used to force the current thread (important: current thread, no thread can tell others to sleep) to go to ```sleeping``` state. When a thread sleeps, it does not return runnable state until it wakes up. Notice that, the sleep method can throw checked InteruptedException.
 ```
@@ -85,7 +88,9 @@ try {
     Thread.sleep(60 * 1000); // Sleep 60 seconds
 } catch (InteruptedException e) {} 
 ```
-Whe an InteruptedException is thrown? When it's interupted before it's wake up time.
+When an InteruptedException is thrown? When it's interupted before it's wake up time.
+
+Remember ```sleep()``` method is a static method of class ```java.lang.Thread``` so don't be fool thinking that one thread can put another thread to sleep.
 
 
 #### yield()
