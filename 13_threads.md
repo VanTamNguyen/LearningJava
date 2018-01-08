@@ -50,6 +50,13 @@
     Implement the *Runnable* interface will allow you to extend the class you like while accepting you define the behavior that will be run by a separate thread.
     
 
+#### Starting Thread
+To start a thread you have to call ```thread.start();```. This mothod call will start a new call stack. To summarize, following are the things happen when you call thread start:
+* A new thread of execution starts (with a new call stack)
+* Thread moves from *new* state to *runnable* state
+* When the thread has chance to run (by the thread scheduler), its target run method will run and thread moves to *running* state.
+
+
 #### Threads Scheduler
 
 
