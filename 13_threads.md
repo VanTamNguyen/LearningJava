@@ -10,7 +10,9 @@
     * Each thread a call stack or each call stack a thread
     
 #### Making a thread
-* Extend the class *java.lang.Thread*
+* Extend the class *java.lang.Thread* and override the method ```public void run()```
+    * You can overload the run method but Thread class will ignore the overloaded method. Even if you call the overloaded run method directly, it will not start a new thread, it will execute the overloaded one in the thread that calls it.
+
 * Implement *Runnable* interface
 
 #### Threads Scheduler
