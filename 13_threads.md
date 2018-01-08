@@ -56,6 +56,12 @@ To start a thread you have to call ```thread.start();```. This mothod call will 
 * Thread moves from *new* state to *runnable* state
 * When the thread has chance to run (by the thread scheduler), its target run method will run and thread moves to *running* state.
 
+#### Running Multiple Threads
+***The behavior is not guaranteed***<br/>
+* Nothing guarantees that threads will start running in order they were started.
+* There is no guarantee that once a thread starts executing it will execute until it's done.
+* A thread done being a thread when its target ```run()``` method completes.
+* Once a thread has beed started, it can never be started again, ```IllegalThreadStateException``` will be thrown.
 
 #### Threads Scheduler
 
