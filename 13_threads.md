@@ -11,7 +11,6 @@
     
 #### Making a thread
 * Extend the class *java.lang.Thread* and override the method ```public void run()```
-    * You can overload the run method but Thread class will ignore the overloaded method. Even if you call the overloaded run method directly, it will not start a new thread, it will execute the overloaded one in the thread that calls it.
     ```
     /**
     * Created by tamnv on 1/8/18.
@@ -26,8 +25,30 @@
         }
     }
     ```
+    You can overload the run method but Thread class will ignore the overloaded method. Even if you call the overloaded run method directly, it will not start a new thread, it will execute the overloaded one in the thread that calls it.
+    
 
 * Implement *Runnable* interface
+    ```
+    /**
+     * Created by tamnv on 1/8/18.
+     */
+    public class SomeTask implements Runnable {
+
+        @Override
+        public void run() {
+            // Code for a new thread here
+        }
+
+        public static void main(String[] args) {
+            SomeTask task = new SomeTask();
+            Thread thread = new Thread(task);
+            thread.start();
+        }
+    }
+    ```
+    Implement the *Runnable* interface will allow you to extend the class you like while accepting you define the behavior that will be run by a separate thread.
+    
 
 #### Threads Scheduler
 
