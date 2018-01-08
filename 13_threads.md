@@ -75,8 +75,8 @@ A thread can only be in one of five states:
 * ***New***, a thread is said in *new* state when an instance of java class Thread is created but not yet call ```start()``` method. In this point, it's a live ```Thread``` object but not yet a thread of execution. It's considered not alive.
 * ***Runnable***, when the method ```start()``` is called, the thread will moves to ```runnable``` state. At this state, the thread will have chance to be picked up be Thread Scheduler to move to ```running``` state. But a thread can also return to ```runnable``` state after entering ```running``` state or comming back from ```blocked/waiting/sleeping``` state. 
 * ***Running***, this is it, the big time when the code in the run method will be executed. The thread scheduler selects a thread from ```runnable``` pool to move it to state ```running```.
-* ***Waiting/Blocked/Sleeping***
-* ***Dead***
+* ***Waiting/Blocked/Sleeping***, this is the state when a thread is not eligible to run. In other words, it's not runnable but it might return to runnable if a particular event occurs. A thread may be *blocked* waiting for a resource (such as IO or an object lock). A thread may be *sleeping* because the thread's run code tell it to sleep a period of time. A thread can be waiting because the thread's run code causes it to wait. The important point is that one thread does not tell the others to block. 
+* ***Dead***, a thread is called *dead* when the run method completes. 
 
 
 
