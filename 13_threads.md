@@ -147,3 +147,8 @@ startMyJob();
 ```
 
 #### 10.Threads Synchronization 
+I have a repository for [[Concurrency]](https://github.com/VanTamNguyen/Concurrency). Here I just want to clarify my understanding on ```wait()```, ```notify()``` and ```notifyAll()```.
+
+* ```wait()```
+* ```notify()```
+* ```notifyAll()```
