@@ -79,14 +79,20 @@ A thread can only be in one of five states:
 * ***Waiting/Blocked/Sleeping***, this is the state when a thread is not eligible to run. In other words, it's not runnable but it might return to runnable if a particular event occurs. A thread may be *blocked* waiting for a resource (such as IO or an object lock). A thread may be *sleeping* because the thread's run code tell it to sleep a period of time. A thread can be waiting because the thread's run code causes it to wait. The important point is that one thread does not tell the others to block. 
 * ***Dead***, a thread is called *dead* when the run method completes. 
 
-#### Interupts
+#### Interrupts
+
+
+
 
 #### sleep()
 The ```sleep()``` method is a static method of class ```java.lang.Thread```. It is used to force the current thread (important: current thread, no thread can tell others to sleep) to go to ```sleeping``` state. When a thread sleeps, it does not return runnable state until it wakes up. Notice that, the sleep method can throw checked InteruptedException.
 ```
 try {
     Thread.sleep(60 * 1000); // Sleep 60 seconds
-} catch (InteruptedException e) {} 
+} catch (InteruptedException e) {
+    // I am sleeping and is interrupted by someone so I have to wake up!
+    // Meaning I can not complete the sleep for 60 seconds
+} 
 ```
 When an InteruptedException is thrown? When it's interupted before it's wake up time.
 
