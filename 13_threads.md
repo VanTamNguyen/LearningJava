@@ -1,7 +1,7 @@
 # Threads
 
 
-#### What exactly is a thread?
+#### 1. What exactly is a thread?
 
 * An instance of Java class *java.lang.Thread* 
     * Like every other objects in Java, Thread objects have variables and method, live and die at heap memory
@@ -9,7 +9,7 @@
     * A lightweight process that has its own call stack
     * Each thread a call stack or each call stack a thread
     
-#### Making a thread
+#### 2. Making a thread
 * Extend the class *java.lang.Thread* and override the method ```public void run()```
     ```
     /**
@@ -51,13 +51,13 @@
     Implement the *Runnable* interface will allow you to extend the class you like while accepting you define the behavior that will be run by a separate thread.
     
 
-#### Starting Thread
+#### 3. Starting Thread
 To start a thread you have to call ```thread.start();```. This method call will start a new call stack. To summarize, following are the things happen when you call thread start:
 * A new thread of execution starts (with a new call stack)
 * Thread moves from *new* state to *runnable* state
 * When the thread has chance to run (by the thread scheduler), its target run method will run and thread moves to *running* state.
 
-#### Running Multiple Threads
+#### 4. Running Multiple Threads
 ***The behavior is not guaranteed***<br/>
 * Nothing guarantees that threads will start running in order they were started.
 * There is no guarantee that once a thread starts executing it will execute until it's done.
@@ -65,11 +65,11 @@ To start a thread you have to call ```thread.start();```. This method call will 
 * Once a thread has beed started, it can never be started again, ```IllegalThreadStateException``` will be thrown.
 
 
-#### Thread Scheduler
+#### 5. Thread Scheduler
 Thread Scheduler is the part of the JVM (although most of JVMs map Java theads directly to OS threads) that decides which thread should be run and which thread should be taken out of running state. 
 
 
-#### Thread States and Transitions
+#### 6. Thread States and Transitions
 <p align="center"><img src="/images/thread_states.png" /></p>
 
 A thread can only be in one of five states:
@@ -79,8 +79,8 @@ A thread can only be in one of five states:
 * ***Waiting/Blocked/Sleeping***, this is the state when a thread is not eligible to run. In other words, it's not runnable but it might return to runnable if a particular event occurs. A thread may be *blocked* waiting for a resource (such as IO or an object lock). A thread may be *sleeping* because the thread's run code tell it to sleep a period of time. A thread can be waiting because the thread's run code causes it to wait. The important point is that one thread does not tell the others to block. 
 * ***Dead***, a thread is called *dead* when the run method completes. 
 
-#### Interrupts
-**Interrupt** is an indication to a thread that it should stop what it is doning and do something else. It's up to programmer to decide how a thread responds to an interrupt but the common way is to terminate the execution (return from run). A thread send an interrupt to other thread by invoking the ```interrupt()``` method of that other thread instance. For the interrupt mechanism woriking correctly the interrupted thread must support its own interruption. 
+#### 6. Interrupts
+Interrupt is an indication to a thread that it should stop what it is doning and do something else. It's up to programmer to decide how a thread responds to an interrupt but the common way is to terminate the execution (return from run). A thread send an interrupt to other thread by invoking the ```interrupt()``` method of that other thread instance. For the interrupt mechanism woriking correctly the interrupted thread must support its own interruption. 
 
 * **Supporting interruption**, how does a thread support its own interruption? It depends on what the thread is doing.
     * If the thread is invoking some methods that can throw ```InterruptedException``` (like *sleep* method), it should simply return from run method after catching that exception.
@@ -90,7 +90,7 @@ A thread can only be in one of five states:
 
 
 
-#### sleep()
+#### 7. sleep()
 The ```sleep()``` method is a static method of class ```java.lang.Thread```. It is used to force the current thread (important: current thread, no thread can tell others to sleep) to go to ```sleeping``` state. When a thread sleeps, it does not return runnable state until it wakes up. Notice that, the sleep method can throw checked InteruptedException.
 ```
 try {
@@ -105,9 +105,9 @@ When an InteruptedException is thrown? When it's interupted before it's wake up 
 Remember ```sleep()``` method is a static method of class ```java.lang.Thread``` so don't be fool thinking that one thread can put another thread to sleep.
 
 
-#### yield()
+#### 8. yield()
 
-#### joind()
+#### 9. joind()
 
 
-#### Threads Synchronization 
+#### 10.Threads Synchronization 
