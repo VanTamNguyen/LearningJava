@@ -126,12 +126,24 @@ Remember ```sleep()``` method is a static method of class ```java.lang.Thread```
 
 
 #### 8. yield()
-What ```yield()``` ***supposed*** to do is move thread from running state to runnable pool to make other threads have chance to be selected by scheduler. But again, yield does not guarantee other threads will be selected, it only guarantee one thing, move current thread from running to runnable.
+```yield()``` is a static method. What ```yield()``` ***supposed*** to do is move thread from running state to runnable pool to make other threads have chance to be selected by scheduler. But again, yield does not guarantee other threads will be selected, it only guarantee one thing, move current thread from running to runnable.
 
 Notice that, yield is almost not helpful in practial, rarely used in practical.
 
 
 #### 9. join()
+If you are in thread B and you want thread A finish its job (enter dead state) so you can start your job, you can invoke ```a.join()``` to wait. Once you invoke ```a.join()``` you (thread B) will be blocked and cannot going to *runnable* state before thread A is done.
+```
+// You are in the thread B here
+// You want thread A to do something for you so that you can start your job in thread B
+Thread a;
+a.start();
 
+// You must invoke a.join() to wait for thread A to be done.
+a.join();
+
+// Once thread A done its job, you can start your job
+startMyJob();
+```
 
 #### 10.Threads Synchronization 
