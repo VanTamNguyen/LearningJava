@@ -84,7 +84,27 @@ Interrupt is an indication to a thread that it should stop what it is doning and
 
 * **Supporting interruption**, how does a thread support its own interruption? It depends on what the thread is doing.
     * If the thread is invoking some methods that can throw ```InterruptedException``` (like *sleep* method), it should simply return from run method after catching that exception.
+    ```
+    // I am doing something and need to take a rest by sleeping to wait for something
+    try {
+        Thread.sleep(60 * 1000); // Try to sleep 1 minute
+    } catch (InterruptedException e) {
+        // But someone (other thread) does not want me to sleep, he/she interrupt my dream by sending an interrupt
+        // I have not slept full 1 minute and have to wake up and quit the execution
+        return;
+    }
+    ```
     * If the thread is not invoking methods that can throw ```InterruptedException```, it should frequently check if it is interrupted and return from run method.
+    ```
+    while (!queue.isEmpty()) {
+        handleMessage(queue.get());
+        
+        if (Thread.interrupted()) {
+            // I am handling messages someone sends me, but the other one want to intterupt me, tell me to quit this job
+            return;
+        }
+    }
+    ```
 
 * **The Interrupt Status Flag**, invoking ```Thread.interrupt()``` sets the interrupted status/flag of the target thread.
 
