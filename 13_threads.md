@@ -80,7 +80,13 @@ A thread can only be in one of five states:
 * ***Dead***, a thread is called *dead* when the run method completes. 
 
 #### Interrupts
+**Interrupt** is an indication to a thread that it should stop what it is doning and do something else. It's up to programmer to decide how a thread responds to an interrupt but the common way is to terminate the execution (return from run). A thread send an interrupt to other thread by invoking the ```interrupt()``` method of that other thread instance. For the interrupt mechanism woriking correctly the interrupted thread must support its own interruption. 
 
+* **Supporting interruption**, how does a thread support its own interruption? It depends on what the thread is doing.
+    * If the thread is invoking some methods that can throw ```InterruptedException``` (like *sleep* method), it should simply return from run method after catching that exception.
+    * If the thread is not invoking methods that can throw ```InterruptedException```, it should frequently check if it is interrupted and return from run method.
+
+* **The Interrupt Status Flag**, invoking ```Thread.interrupt()``` sets the interrupted status/flag of the target thread.
 
 
 
