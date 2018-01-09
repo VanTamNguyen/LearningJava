@@ -126,8 +126,12 @@ Remember ```sleep()``` method is a static method of class ```java.lang.Thread```
 
 
 #### 8. yield()
+What ```yield()``` ***supposed*** to do is move thread from running state to runnable pool to make other threads have chance to be selected by scheduler. But again, yield does not guarantee other threads will be selected, it only guarantee one thing, move current thread from running to runnable.
 
-#### 9. joind()
+Notice that, yield is almost not helpful in practial, rarely used in practical.
+
+
+#### 9. join()
 
 
 #### 10.Threads Synchronization 
