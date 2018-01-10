@@ -151,6 +151,6 @@ I have a repository [[Concurrency]](https://github.com/VanTamNguyen/Concurrency)
 
 * *wait(), notify(), notifyAll() must be called in context of synchronized. Meaning a thread cannot invoke wait/notify method on an object if it does not own that object's lock (monitor).*
 
-* ```wait()```
+* ```wait()``` method lets a thread says, *There is nothing for me to do now, so put me in the waiting pool and notify me when something happens that I care about*. Basically, a ```wait()``` call meaning *let me wait in the pool* or *add me to the waiting list*.
 * ```notify()```
 * ```notifyAll()```
