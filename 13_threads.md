@@ -152,5 +152,5 @@ I have a repository [[Concurrency]](https://github.com/VanTamNguyen/Concurrency)
 * *wait(), notify(), notifyAll() must be called in context of synchronized. Meaning a thread cannot invoke wait/notify method on an object if it does not own that object's lock (monitor).*
 
 * ```wait()``` method lets a thread says, *There is nothing for me to do now, so put me in the waiting pool and notify me when something happens that I care about*. Basically, a ```wait()``` call meaning *let me wait in the pool* or *add me to the waiting list*.
-* ```notify()```
-* ```notifyAll()```
+* ```notify()``` method is used to send a signal to one and only one of the threads that are waiting on the same object's waiting pool. ```notify()``` CANNOT specify which waiting thread to notify.
+* ```notifyAll()``` works in the same ways as ```notify()```, only it sends the signal to *all* threads that are waiting on the object. This invoke will let all the waiting threads start a race to aquire the lock of object to continue doing their job.
