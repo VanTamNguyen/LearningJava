@@ -147,7 +147,8 @@ startMyJob();
 ```
 
 #### 10.Threads Synchronization 
-I have a repository for [[Concurrency]](https://github.com/VanTamNguyen/Concurrency). Here I just want to clarify my understanding on ```wait()```, ```notify()``` and ```notifyAll()```.
+I have a repository [[Concurrency]](https://github.com/VanTamNguyen/Concurrency) for synchronization. Here I just want to clarify my understanding on ```wait()```, ```notify()``` and ```notifyAll()```. One key point to remember (and keep it stuck in your mind) about wait/notify is this:
+    * *wait(), notify(), notifyAll() must be called in context of synchronized. Meaning a thread cannot invoke wait/notify method on an object if it does not own that object's lock (monitor).*
 
 * ```wait()```
 * ```notify()```
