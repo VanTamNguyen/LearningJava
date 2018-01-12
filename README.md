@@ -1,4 +1,4 @@
-# Learning Java from the book OCA/OCP Java SE 7 Programmer I & II Study Guide
+# Learning Java from the book OCA/OCP Java SE 7
 
 
 ### [Chapter 02: Object Orientation](02_oo.md)
