@@ -154,3 +154,11 @@ I have a repository [[Concurrency]](https://github.com/VanTamNguyen/Concurrency)
 * ```wait()``` method lets a thread says, *There is nothing for me to do now, so put me in the waiting pool and notify me when something happens that I care about*. Basically, a ```wait()``` call meaning *let me wait in the pool* or *add me to the waiting list*.
 * ```notify()``` method is used to send a signal to one and only one of the threads that are waiting on the same object's waiting pool. ```notify()``` CANNOT specify which waiting thread to notify.
 * ```notifyAll()``` works in the same ways as ```notify()```, only it sends the signal to ALL threads that are waiting on the object. This invoke will let all the waiting threads start a race to aquire the lock of object to continue doing their job.
+
+
+#### Questions to Think
+* When does a thread escape the ```running``` state?
+* What is the Race Condition?
+* What is the Critical Section?
+* What is the Synchronization and how to synchronize in Java?
+* Differences between ```synchronized method``` and ```synchronized block```? Which is preferred to use?
