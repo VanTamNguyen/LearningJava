@@ -47,7 +47,7 @@ public class BlockingQueue {
             }
 
             queue.notify();
-            return queue.get(0);
+            return queue.remove(0);
         }
     }
 
