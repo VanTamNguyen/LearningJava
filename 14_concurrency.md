@@ -10,3 +10,12 @@
     }
     ```
 * **[Compare and swap](https://en.wikipedia.org/wiki/Compare-and-swap)** is another *atomic instruction* provided by modern hardware systems to support synchronization.
+    ```
+    function cas(p : pointer to int, old : int, new : int) returns bool {
+        if *p ≠ old {
+            return false
+        }
+        *p ← new
+        return true
+    }
+    ```
