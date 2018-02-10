@@ -24,15 +24,15 @@
 
 * Method ```getAndIncrement``` in ```AtomicInteger``` illustrates how atomic classes use CAS for thread safe.
 ```
-        public int getAndIncrement() {
-        for (;;) {
-            int current = get();
-            int next = current + 1;
-            if (compareAndSwap(current, next)) {
-                return current;
-            }
+public int getAndIncrement() {
+    for (;;) {
+        int current = get();
+        int next = current + 1;
+        if (compareAndSwap(current, next)) {
+            return current;
         }
     }
+}
 ```
 
 #### 2. Locks
