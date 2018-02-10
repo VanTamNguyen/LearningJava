@@ -23,7 +23,6 @@
 * The ```java.util.concurrent.atomic``` package provides variables whose values can be modified atomically. All atomic operations of all classes in this package are based on ```Compare and swap```.
 
 * Method ```getAndIncrement``` in ```AtomicInteger``` illustrates how atomic classes use CAS for thread safe.
-    
     ```
     public int getAndIncrement() {
         for (;;) {
@@ -34,4 +33,4 @@
             }
         }
     }
-    ```
+    ```
