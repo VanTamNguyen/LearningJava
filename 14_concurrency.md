@@ -24,6 +24,8 @@
 
 * Method ```getAndIncrement``` in ```AtomicInteger``` illustrates how atomic classes use CAS for thread safe.
     ```
+    
+    ```
     public int getAndIncrement() {
         for (;;) {
             int current = get();
@@ -33,6 +35,6 @@
             }
         }
     }
-    ```
+    ```
 
 #### 2. Locks
