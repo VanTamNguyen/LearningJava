@@ -36,5 +36,5 @@
     ```
 
 #### 2. Locks
-* ```ReentrantLock``` implements ```java.concurrent.locks.Lock``` interface to provide pure **mutual exclusion** (at most one thread at a time can hold ReentrantLock).
-* ```ReentrantReadWriteLock```
+* ```ReentrantLock``` implements ```java.concurrent.locks.Lock``` interface to provide standard **mutual exclusion** (at most one thread at a time can hold ReentrantLock).
+* ```ReentrantReadWriteLock``` implements ```java.concurrent.locks.ReadWriteLock```. Mutual exclusion is a conservative locking strategy that prevents writer/writer, writer/reader overlap but also prevents reader/reader overlap. Many data structures are **read-mostly**. In these cases, read-write lock comes to relax the locking requirements.
