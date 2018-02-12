@@ -34,6 +34,6 @@ public class AtomicExample {
         increaseThread.join();
         decreaseThread.join();
 
-        System.out.println("After several increment and decrement the resource is still: " + resource.intValue());
+        System.out.println("After several increments and decrements the resource is still: " + resource.intValue());
     }
 }
