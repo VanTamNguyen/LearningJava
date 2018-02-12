@@ -48,4 +48,4 @@
     ```
     * Mutual exclusion is a conservative locking strategy that prevents writer/writer, writer/reader overlap but also prevents reader/reader overlap.
     * Many data structures are **read-mostly**. In these cases, read-write lock comes to relax the locking requirements.
-    * Read-write lock allows a resource can be accessed by many readers or a single writer at a time but not both.
+    * ***Read-write lock allows a resource can be accessed by many readers or a single writer at a time but not both.***
