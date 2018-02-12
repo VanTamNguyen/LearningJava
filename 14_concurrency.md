@@ -36,3 +36,5 @@
     ```
 
 #### 2. Locks
+* ```ReentrantLock```
+* ```ReentrantReadWriteLock```
