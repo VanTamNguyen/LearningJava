@@ -36,5 +36,5 @@
     ```
 
 #### 2. Locks
-* ```ReentrantLock``` implements ```java.concurrent.locks.Lock``` interface to provide pure **mutual exclusion**.
+* ```ReentrantLock``` implements ```java.concurrent.locks.Lock``` interface to provide pure **mutual exclusion** (at most one thread at a time can hold ReentrantLock).
 * ```ReentrantReadWriteLock```
