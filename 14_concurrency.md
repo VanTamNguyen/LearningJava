@@ -33,7 +33,8 @@
             }
         }
     }
-    ```
+    ```
+
 * [Coding example](code/src/com/tamco/concurrency/AtomicExample.java)
 
 #### 2. Locks
