@@ -54,7 +54,10 @@
     * Use readLock for reading operations and writeLock for writing operations. Remember and keep it stuck in your mind: *readLock for reading and writeLock for writing*.
 
 
-#### 3. Concurrent Collections
+#### 3. Synchronized Collections
+**Synchronized collections** include ```Vector``` and ```Hashtable``` classes. And from Java 1.2, Java provides synchronized collection wrappers created by the ```Collections.synchronizedXxx()``` factory methods. These classes achieve thread safety by encapsulating their states and synchronizing every public methods so that one thread at a time can access collection state.
+
+#### 4. Concurrent Collections
 * **Copy-On-Write Collections** 
 
 
