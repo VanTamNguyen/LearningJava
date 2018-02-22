@@ -57,6 +57,7 @@
 #### 3. Synchronized Collections
 * **Synchronized collections** include ```Vector``` and ```Hashtable``` classes. And from Java 1.2, Java provides synchronized collection wrappers created by the ```Collections.synchronizedXxx()``` factory methods. These classes achieve thread safety by encapsulating their states and synchronizing every public methods so that one thread at a time can access collection state.
 * For example, ```Collections.synchronizedList(List<E> list)``` returns a ```SynchronizedList``` wrapper object. ```SynchronizedList``` is a wrapper of ```List``` which synchronizes every public methods to achieve thread safety.
+
     ```
     static <T> List<T> synchronizedList(List<T> list) {
         return (list instanceof RandomAccess ?
