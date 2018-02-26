@@ -73,5 +73,7 @@
     * Iterators for copy-on-write collections retain a reference to the backing collection that was current at the start of iteration. As the result, multiple thread can iterate the collection without interference from one another or from threads wanting to modify the collection.
     * The iterators returned by copy-on-write collections do not throw ```ConcurrentModificationException``` and return the elements exactly as they were at the time the iterator was created.
 
+* **Concurrent Collections**
+
 
 #### 4. Executors and ThreadPool
