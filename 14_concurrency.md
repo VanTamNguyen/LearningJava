@@ -70,6 +70,8 @@
 * **Copy-On-Write Collections**
     * Derive (achieve) their thread safety from the fact that as long as an immuatble (read-only) object is properly published, no further synchronization is needed when accessing it.
     * They implement mutibility by creating and republishing a new copy of the colleciton every time it is modified.
+    * Iterators for copy-on-write collections retain a reference to the backing collection that was current at the start of iteration. As the result, multiple thread can iterate the collection without interference from one another or from threads wanting to modify the collection.
+    * The iterators returned by copy-on-write collections do not throw ```ConcurrentModificationException``` and return the elements exactly as they were at the time the iterator was created.
 
 
 #### 4. Executors and ThreadPool
