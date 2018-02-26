@@ -67,7 +67,9 @@
     ```
 
 #### 4. Concurrent Collections
-* **Copy-On-Write Collections** 
+* **Copy-On-Write Collections**
+    * Derive (achieve) their thread safety from the fact that as long as an immuatble (read-only) object is properly published, no further synchronization is needed when accessing it.
+    * They implement mutibility by creating and republishing a new copy of the colleciton every time it is modified.
 
 
 #### 4. Executors and ThreadPool
