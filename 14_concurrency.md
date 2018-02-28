@@ -74,11 +74,11 @@
     * The iterators returned by copy-on-write collections do not throw ```ConcurrentModificationException``` and return the elements exactly as they were at the time the iterator was created.
 
 * **Concurrent Collections**
-    * ```ConcurrentHashMap```
-    * ```ConcurrentSkipListMap```
-    * ```ConcurrentSkipListSet```
-    * ```ConccurentLinkedDeque```
-    * ```ConcurrentLinkedQueue```
+    * ```ConcurrentHashMap```
+    * ```ConcurrentSkipListMap```
+    * ```ConcurrentSkipListSet```
+    * ```ConccurentLinkedDeque```
+    * ```ConcurrentLinkedQueue```
 
 * **Blocking Queue**
 
