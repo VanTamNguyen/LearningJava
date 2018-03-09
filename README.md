@@ -1,4 +1,4 @@
-# Learning Java from the book OCA/OCP Java SE 7
+# Java lessons I learn. All topics, from basics to advances
 
 
 ### [Chapter 02: Object Orientation](02_oo.md)
