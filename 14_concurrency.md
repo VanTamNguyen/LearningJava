@@ -80,7 +80,7 @@
     * ```ConccurentLinkedDeque```
     * ```ConcurrentLinkedQueue```
 
-* **Blocking Queue**
-Thread A (producing thread) put items to ```BlockingQueue```, thread B (consuming thread) get items from the queue. If the queue is full then thread A will be blocked while taking action of putting an item to the queue until thread B gets some items from the queue. And vice versa, if the queue is empty then thread B will be blocked while taking action of getting an item from the queue until thread A puts some items to the queue.
+* **Blocking Queue**<br/>
+    Thread A (producing thread) put items to ```BlockingQueue```, thread B (consuming thread) get items from the queue. If the queue is full then thread A will be blocked while taking action of putting an item to the queue until thread B gets some items from the queue. And vice versa, if the queue is empty then thread B will be blocked while taking action of getting an item from the queue until thread A puts some items to the queue.
 
 #### 5. Executors and ThreadPool
