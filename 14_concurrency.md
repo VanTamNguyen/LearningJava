@@ -82,6 +82,7 @@
 
 * **Blocking Queue**<br/>
     Thread A (producing thread) put items to ```BlockingQueue```, thread B (consuming thread) get items from the queue. If the queue is full then thread A will be blocked while taking action of putting an item to the queue until thread B gets some items from the queue. And vice versa, if the queue is empty then thread B will be blocked while taking action of getting an item from the queue until thread A puts some items to the queue.<br/>
+
     The ```java.util.concurrent``` provides many implementations of ```BlockingQueue```:
     * ```ArrayBlockingQueue```
     * ```LinkedBlockingQueue```
