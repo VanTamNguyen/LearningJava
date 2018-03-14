@@ -134,5 +134,12 @@ To ultilize the CPU we need to control how many threads are created. So we need 
     * *SingleThread Pools*<br/>
     ```ExecutorService ex = Executors.newSingleThreadExecutor()``` A single thread executor uses only one thread to execute tasks. The tasks that cannot be executed immediately are placed on an unbounded queue for later execution.
 
-* **ScheduledThread Pool**
+* **ScheduledThread Pool** is used to execute tasks after a delay or at repeating interval.
+    ```
+    ScheduledExecutorService ses = Executors.newScheduledThreadPool(4);
+    ses.schedule(task, 5, TimeUnit.SECONDS); // Run a task with a delay of 5 seconds
+    ses.scheduleAtFixedRate(task, 2, 5, TimeUnit.SECONDS); // Run a task repeatedly with an interval of 5 seconds after a delay of 2 seconds
+    ses.scheduleWithFixedDelay(task, 2, 5, TimeUnit.SECONDS); // Run a task repeatedly after the previous task completes 5 seconds, the first task runs after a delay of 2 seconds.
+    ```
+
 * **Callable Interface**
