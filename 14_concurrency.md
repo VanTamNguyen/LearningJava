@@ -120,7 +120,7 @@ To ultilize the CPU we need to control how many threads are created. So we need 
         }
         ```
     * Queue tasks and processing them with only enough threads (thread pool) to utilize CPU 
-* **Executors**
+* **Executors** is factory for implementations of ```Executor```. It provides many standard implementations of Executor.
 * **ExecutorService**
     * *CachedThread Pools*
     * *FixedThread Pools*
