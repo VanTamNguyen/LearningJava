@@ -94,22 +94,31 @@
 
 #### 5. Executors and ThreadPool
 To ultilize the CPU we need to control how many threads are created. So we need to decouple tasks from threads creation. ```java.util.concurrent.Executor``` comes to help. The basic usage will look somthing like this:
-```
-Runnable task = new YourRunnable();
-Executor executor = // some implementations of Executor
-executor.execute(task);
-```
+    ```
+    Runnable task = new YourRunnable();
+    Executor executor = // some implementations of Executor
+    executor.execute(task);
+    ```
 * **Executor** is used to execute the run method in a runnable instance. By coding to the ```Executor``` interface we can provide some threading approaches like these:
     * Not starting any thread at all (task is run in the calling thread)
-    ```
-    public class SingleThreadExecutor implements Executor {
-        @Override
-        public void execute(Runnable task) {
-            task.run();
+        ```
+        public class SingleThreadExecutor implements Executor {
+            @Override
+            public void execute(Runnable task) {
+                task.run();
+            }
         }
-    }
-    ```
+        ```
     * Starting new thread for each task
+        ```
+        public class SingleThreadExecutor implements Executor {
+            @Override
+            public void execute(Runnable task) {
+                Thread thread = new Thread();
+                thread.start(task);
+            }
+        }
+        ```
     * Queue tasks and processing them with only enough threads (thread pool) to utilize CPU 
 * **Executors**
 * **ExecutorService**
