@@ -93,6 +93,12 @@
     * ```SynchronousQueue```
 
 #### 5. Executors and ThreadPool
+To ultilize the CPU we need to control how many threads are created. So we need to decouple tasks from threads creation. ```java.util.concurrent.Executor``` comes to help. The basic usage will look somthing like this:
+```
+Runnable task = new YourRunnable();
+Executor executor = // some implementations of Executor
+executor.execute(task);
+```
 * **Executor**
 * **Executors**
 * **ExecutorService**
