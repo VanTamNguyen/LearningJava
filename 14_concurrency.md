@@ -101,6 +101,14 @@ executor.execute(task);
 ```
 * **Executor** is used to execute the run method in a runnable instance. By coding to the ```Executor``` interface we can provide some threading approaches like these:
     * Not starting any thread at all (task is run in the calling thread)
+    ```
+    public class SingleThreadExecutor implements Executor {
+        @Override
+        public void execute(Runnable task) {
+            task.run();
+        }
+    }
+    ```
     * Starting new thread for each task
     * Queue tasks and processing them with only enough threads (thread pool) to utilize CPU 
 * **Executors**
