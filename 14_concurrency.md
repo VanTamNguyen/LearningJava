@@ -129,6 +129,8 @@ To ultilize the CPU we need to control how many threads are created. So we need 
     ```ExecutorService ex = Executors.newCachedThreadPool()``` A cached thread pool will create threads as they needed to execute the tasks and reuse the threads that become free. Threads that have been idle for 60 seconds will be removed from the pool.
 
     * *FixedThread Pools*
+    ```ExecutorService ex = Executors.newFixedThreadPool(10)``` A fixed thread pool will create a pool with a specific number of threads. This kind of thread pool will prevent an application from overloading a system with too many threads. Tasks that cannot be executed immediately are placed on an unbounded queue for later execution.
+
     * *SingleThread Pools*
 * **ScheduledThread Pool**
 * **Callable Interface**
