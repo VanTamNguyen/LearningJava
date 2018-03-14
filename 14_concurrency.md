@@ -120,10 +120,14 @@ To ultilize the CPU we need to control how many threads are created. So we need 
         }
         ```
     * Queue tasks and processing them with only enough threads (thread pool) to utilize CPU 
+
 * **Executors** is factory for implementations of ```Executor```. It provides many standard implementations of Executor.
+
 * **ExecutorService** is an interface that extends ```Executor```. Actually, ```Executors``` factory methods will return ```ExecutorService```. ExecutorService provides management capability and can return ```Future``` references that are used to obtain the result of executing the task asynchronously. 
-    * *CachedThread Pools*
+
+    * *CachedThread Pools*<br/>
     ```ExecutorService ex = Executors.newCachedThreadPool()``` A cached thread pool will create threads as they needed to execute the tasks and reuse the threads that become free. Threads that have been idle for 60 seconds will be removed from the pool.
+
     * *FixedThread Pools*
     * *SingleThread Pools*
 * **ScheduledThread Pool**
