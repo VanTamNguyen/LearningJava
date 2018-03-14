@@ -99,7 +99,10 @@ Runnable task = new YourRunnable();
 Executor executor = // some implementations of Executor
 executor.execute(task);
 ```
-* **Executor**
+* **Executor** is used to execute the run method in a runnable instance. By coding to the ```Executor``` interface we can provide some threading approaches like these:
+    * Not starting any thread at all (task is run in the calling thread)
+    * Starting new thread for each task
+    * Queue tasks and processing them with only enough threads (thread pool) to utilize CPU 
 * **Executors**
 * **ExecutorService**
     * *CachedThread Pools*
