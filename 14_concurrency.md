@@ -150,3 +150,11 @@ To ultilize the CPU we need to control how many threads are created. So we need 
 
 * **Callable Interface**<br/>
 The ```java.util.concurrent.Callable``` interface serves the same purpose as the ```Runnable``` interface, but provides more flexibility. An ```ExecutorService``` can be passed a ```Callable``` instead of a ```Runnable```. A Callable may return a result upon completing execution or may throw a checked excetption.
+    ```
+    Callable task = new Callable<Integer>() {
+        @Override
+        public Integer call() {
+            
+        }
+    };
+    ```
