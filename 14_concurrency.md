@@ -156,4 +156,18 @@ The ```java.util.concurrent.Callable``` interface serves the same purpose as the
             return 100;
         }
     };
+    
+    ExecutorService executor = Executors.newSingleThreadExecutor();
+    Future<Integer> future = executor.submit(task);
+    
+    try {
+        Integer result = future.get(); // block until task done
+        System.out.println("Result: " + result);
+        
+    } catch (InterruptedException ex) {
+        // Raised when the thread calling the future.get() method is interrupted before a result can be returned.
+        
+    } catch (ExecutionException ex) {
+        // Rasied when an exception was thrown during the execution of Callable's call() method.
+    }
     ```
