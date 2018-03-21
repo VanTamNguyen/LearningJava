@@ -1,7 +1,7 @@
 # JDBC
 The purpose of JDBC is to provide an API for Java developers to write Java applications that can access and manipulate relational databases and use SQL to perform CRUD operations.<br/>
 
-The JDBC driver is an implementation of JDBC API provided by the vendor of database product.
+The JDBC driver is an implementation of JDBC API provided by the vendor of database product in a jar or zip file.
 
 
 #### 1. Connect to a Database Using DriverManager
