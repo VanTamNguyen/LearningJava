@@ -7,6 +7,7 @@ The JDBC API is a set of interfaces with one concrete class, ```DriverManager```
 
 
 #### 1. Connect to a Database Using DriverManager
+```DriverManager``` is a concrete class in JDBC API. It's a factory with static methods that help us construct ```Connection``` to databases. 
 
 #### 2. Submit Queries and Read Results from a Database
 
