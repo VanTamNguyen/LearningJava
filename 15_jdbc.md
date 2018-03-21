@@ -7,7 +7,15 @@ The JDBC API is a set of interfaces with one concrete class, ```DriverManager```
 
 
 #### 1. Connect to a Database Using DriverManager
-```DriverManager``` is a concrete class in JDBC API. It's a factory with static methods that help us construct ```Connection``` to databases. 
+```DriverManager``` is a concrete class in JDBC API. It's a factory with static method ```getConnection(url, username, password)``` that help us construct ```Connection``` to databases.
+
+* When the method ```getConnection(url, username, password)``` is invoked, the DriverManager will parse the url to find the appropriate ```JDBC Driver``` (provided by database vendor) to construct a connection to the database.
+
+* How JDBC Drivers register with the DriverManager?
+    * First, one or more JDBC drivers, in a JAR or ZIP file, are inlcuded in the classpath of our application.
+    * The DriverManager will use a service provider mechanism to search the classpath  
+
+* JDBC URL
 
 #### 2. Submit Queries and Read Results from a Database
 
