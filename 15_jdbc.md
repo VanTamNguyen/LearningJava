@@ -7,7 +7,9 @@ The JDBC API is a set of interfaces with one concrete class, ```DriverManager```
 
 ```
 Note:
-    In this document, when we say JDBC driver ("d" in lowercase) we mean the implementation of JDBC API that provided by a database vendor. When we say JDBC Driver ("D" in uppercase) we mean the interface Driver in JDBC API.
+    In this document, when we say JDBC driver ("d" in lowercase) we mean the implementation of JDBC API 
+    that provided by a database vendor.
+    When we say JDBC Driver ("D" in uppercase) we mean the interface Driver in JDBC API.
 ```
 
 #### 1. Connect to a Database Using DriverManager
