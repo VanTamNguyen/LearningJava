@@ -5,6 +5,10 @@ The JDBC driver is an implementation of JDBC API provided by the vendor of datab
 
 The JDBC API is a set of interfaces with one concrete class, ```DriverManager``` class. The provider (vender) of JDBC driver write code that implements those interfaces. The key interfaces a JDBC driver must implement include ```Driver```, ```Connection```, ```Statement``` and ```ResultSet```.
 
+```
+Note:
+    In this document, when we say JDBC driver ("d" in lowercase) we mean the implementation of JDBC API that provided by a database vendor. When we say JDBC Driver ("D" in uppercase) we mean the interface Driver in JDBC API.
+```
 
 #### 1. Connect to a Database Using DriverManager
 ```DriverManager``` is a concrete class in JDBC API. It's a factory with static method ```getConnection(url, username, password)``` that help us construct ```Connection``` to databases.
