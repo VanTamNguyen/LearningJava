@@ -35,7 +35,7 @@ Note:
         ```
 
 * **JDBC URL**
-    * The format of JDBC URL is *jdbc:subprotocol:subname* where as the subprotocol is usually the vendor name which helps DriverManager specifies which JDBC driver should be used to construct a connection to database.
+    * The format of JDBC URL is *jdbc:subprotocol:subname* where as the subprotocol is usually the vendor name which helps DriverManager specifies which JDBC driver should be used to construct a connection to the database.
     * jdbc:mysql://localhost:3306/MyDB
 
 #### 2. Submit Queries and Read Results from a Database
