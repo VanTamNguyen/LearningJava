@@ -13,13 +13,13 @@ Note:
 ```
 
 #### 1. Connect to a Database Using DriverManager
-```DriverManager``` is a concrete class in JDBC API. It's a factory with static method ```getConnection(url, username, password)``` that help us construct ```Connection``` to databases.
+```DriverManager``` is a concrete class in JDBC API. It's a factory with static method ```getConnection(url, username, password)``` that help us construct ```Connection``` to a database.
 
 * When the method ```getConnection(url, username, password)``` is invoked, the DriverManager will parse the url to find the appropriate ```JDBC Driver``` (provided by database vendor) to construct a connection to the database.
 
 * How JDBC Drivers register with the DriverManager?
     * First, one or more JDBC drivers, in a JAR or ZIP file, are inlcuded in the classpath of our application.
-    * The DriverManager will use a service provider mechanism to search the classpath  
+    * The DriverManager will use a service provider mechanism to search the file **java.sql.Driver** in any JAR or ZIP libraries. The file java.sql.Driver is placed in the folder **META-INF/services**. The file **java.sql.Driver** is a simply text file that contains the full name of the class that the vendor uses to implement ```java.sql.Driver``` interface.
 
 * JDBC URL
 
