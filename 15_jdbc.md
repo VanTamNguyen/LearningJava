@@ -22,9 +22,9 @@ Note:
     * The DriverManager will use a service provider mechanism to search the file **java.sql.Driver** in any JAR or ZIP libraries. The file java.sql.Driver is placed in the folder **META-INF/services**. The file **java.sql.Driver** is a simply text file that contains the full name of the class that the vendor uses to implement ```java.sql.Driver``` interface.
     * For example, the MySQL JDBC driver provides the class **com.mysql.jdbc.Driver** that implements ```java.sql.Driver``` interface.
     * The DriverManager will try to load the class that implements ```java.sql.Driver``` interface using the class loader.
-    ```
-    Class.forName("com.mysql.jdbc.Driver");
-    ```
+        ```
+        Class.forName("com.mysql.jdbc.Driver");
+        ```
 
 * JDBC URL
 
