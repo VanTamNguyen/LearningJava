@@ -25,6 +25,14 @@ Note:
         ```
         Class.forName("com.mysql.jdbc.Driver");
         ```
+    * When the Driver class is loaded, its static initialization block will be executed to register itself with the DriverManager.
+        ```
+        public class SomeDriver implement java.sql.Driver {
+            static {
+                DriverManager.register(new SomeDriver());
+            }
+        }
+        ```
 
 * JDBC URL
 
