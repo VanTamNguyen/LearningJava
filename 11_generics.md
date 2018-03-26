@@ -1,6 +1,10 @@
 # Generics and Collections
 
-#### 1. ```toString()```, ```hashCode()``` and ```equals()```
+#### 1. ```hashCode()``` and ```equals()```
+Why study ```hashCode()``` and ```equals()``` here? Cause they are essential to working with Java Collections Framework.
+
+* ```equals()``` decides whether two objects are meaningfully equivalent.
+* ```hashCode()``` 
 
 
 #### 2. Collections
