@@ -5,7 +5,7 @@ Why study ```hashCode()``` and ```equals()``` here? Cause they are essential to 
 
 * ```equals()``` decides whether two objects are meaningfully equivalent.
     * ```==``` operator just compares two object references. It simply looks at the bits in the variables and verify if they are the same or not.
-    * If we don't override 
+    * If we don't override a class's ```equals()``` method, we won't be able to use those objects as a key in a hashtable and we won't be able to get accurate Sets such that does not allow duplicated object.
 * ```hashCode()``` 
 
 
