@@ -1,7 +1,7 @@
 # Generics and Collections
 
 #### 1. ```hashCode()``` and ```equals()```
-Why study ```hashCode()``` and ```equals()``` here? Cause they are essential to working with Java Collections Framework.
+Why study ```hashCode()``` and ```equals()``` here? Cause they are essential to working with Java Collections Framework. Whener you need to sort or search through a collection of objects, the ```equals()``` and ```hashCode()``` methods are essential.
 
 * ```equals()``` decides whether two objects are meaningfully equivalent.
     * ```==``` operator just compares two object references. It simply looks at the bits in the variables and verify if they are the same or not.
