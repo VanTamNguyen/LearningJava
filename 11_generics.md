@@ -13,7 +13,7 @@ Why study ```hashCode()``` and ```equals()``` here? Cause they are essential to 
         * **Transitive**: x.equals(y) and y.equals(z) then x.equals(z)
         * For non-null reference x then x.equals(null) should return false
 
-* ```hashCode()``` is used by some collections to specify the way how an object is *stored* in the collection and how it is *located* from the collection.  
+* ```hashCode()``` is used by some collections to specify the way how an object is *stored* in the collection and how it is *located* from the collection. ```hashCode()``` implements the hash function and it should use the same instance variables that the ```equals()``` method uses.
 
 
 #### 2. Collections
