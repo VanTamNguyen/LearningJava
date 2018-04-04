@@ -14,6 +14,9 @@ Why study ```hashCode()``` and ```equals()``` here? Cause they are essential to 
         * For non-null reference x then x.equals(null) should return false
 
 * ```hashCode()``` is used by some collections to specify the way how an object is *stored* in the collection and how it is *located* from the collection. ```hashCode()``` implements the hash function and it should use the same instance variables that the ```equals()``` method uses.
+    * The ```hashCode()``` contract:
+        * x.equals(y) then x.hashCode() and y.hashCode() must return the same integer result
+        * But x.hashCode() and y.hashCode() return the same integer then x may not equal to y
 
 
 #### 2. Collections
