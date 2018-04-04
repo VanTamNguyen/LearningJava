@@ -8,10 +8,10 @@ Why study ```hashCode()``` and ```equals()``` here? Cause they are essential to 
     * If we don't override a class's ```equals()``` method, we won't be able to use those objects as a key in a hashtable and we won't be able to get accurate Sets such that does not allow duplicated object.
     * If we want objects of our class can be used as keys for a hashtable (or as elements in any data structure that uses equivalency for searching for and/or retrieving an object), so we must override ```equals()``` so that two different instances can be considered the same.
     * The ```equals()``` contract:
-        * **Reflexive**: x.equals(x) == true
-        * **Symetric**: x.equals(y) then y.equals(x)
-        * **Transitive**: x.equals(y) and y.equals(z) then x.equals(z)
-        * For non-null reference x then x.equals(null) should return false
+        * **Reflexive**: ```x.equals(x)``` == true
+        * **Symetric**: ```x.equals(y)``` then ```y.equals(x)```
+        * **Transitive**: ```x.equals(y)``` and ```y.equals(z)``` then ```x.equals(z)```
+        * For non-null reference x then ```x.equals(null)``` should return false
 
 * ```hashCode()``` is used by some collections to specify the way how an object is *stored* in the collection and how it is *located* from the collection. ```hashCode()``` implements the hash function and it should use the same instance variables that the ```equals()``` method uses.
     * The ```hashCode()``` contract:
