@@ -23,7 +23,7 @@ Why study ```hashCode()``` and ```equals()``` here? Cause they are essential to 
 #### 2. Collections
 * **Collections Overview**
     * **Ordered** When a collection is ordered, it means you can iterate through the collection in a specific order. A ```Hashtable``` is not an ordered collection although it has its internal logic to determine the order of iteration. An ```ArrayList``` keeps the order established by the element's index (just like an array). A ```LinkedHashSet``` keeps the order established by insertion so the last element inserted is the last element in that ```LinkedHashSet```.
-    * **Sorted**
+    * **Sorted** Use ```Comparator``` and ```Comparable``` to define sort order to sort a collection.
 
 * **List Interface**
 
