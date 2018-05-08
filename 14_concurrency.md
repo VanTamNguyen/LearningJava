@@ -35,7 +35,7 @@
     }
     ```
 
-* [Coding example](code/src/com/tamco/concurrency/AtomicExample.java)
+* [Atomic coding example](code/src/com/tamco/concurrency/AtomicExample.java)
 
 #### 2. Locks
 * ```ReentrantLock``` implements ```java.concurrent.locks.Lock``` interface to provide standard **mutual exclusion**.
