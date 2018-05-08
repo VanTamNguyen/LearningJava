@@ -149,11 +149,13 @@ startMyJob();
 #### 10. Threads Synchronization 
 I have a repository [[Concurrency]](https://github.com/VanTamNguyen/Concurrency) for synchronization. Here I just want to clarify my understanding on ```wait()```, ```notify()``` and ```notifyAll()```. One key point to remember (and keep it stuck in your mind) about wait/notify is this:
 
-* *wait(), notify(), notifyAll() must be called in context of synchronized. Meaning a thread cannot invoke wait/notify method on an object if it does not own that object's lock (monitor).* ```wait()``` invocation will release the lock. ```wait()``` has to be called in a loop due to [spurious wake-up](https://stackoverflow.com/a/2537117).
+* *wait(), notify(), notifyAll() must be called in context of synchronized. Meaning a thread cannot invoke wait/notify method on an object if it does not own that object's lock (monitor).*
 
-* ```wait()``` method lets a thread says, *there is nothing for me to do now, so put me in the waiting pool and notify me when something happens that I care about*. Basically, a ```wait()``` call meaning *let me wait in the pool* or *add me to the waiting list*.
-* ```notify()``` method is used to send a signal to one and only one of the threads that are waiting on the same object's waiting pool. ```notify()``` CANNOT specify which waiting thread to notify.
-* ```notifyAll()``` works in the same ways as ```notify()```, only it sends the signal to ALL threads that are waiting on the object. This invoke will let all the waiting threads start a race to aquire the lock of object to continue doing their job.
+* ```wait()``` method lets a thread says, *there is nothing for me to do now, so put me in the waiting pool and notify me when something happens that I care about*. Basically, a ```wait()``` call meaning *let me wait in the pool* or *add me to the waiting list*.  ```wait()``` invocation will release the lock. ```wait()``` has to be called in a loop due to [spurious wake-up](https://stackoverflow.com/a/2537117).
+
+* ```notify()``` method is used to send a signal to one and only one of the threads that are waiting on the same object's waiting pool. ```notify()``` CANNOT specify which waiting thread to notify. ```notify()``` DOES NOT release the lock.
+
+* ```notifyAll()``` works in the same ways as ```notify()```, only it sends the signal to ALL threads that are waiting on the object. This invoke will let all the waiting threads start a race to aquire the lock of object to continue doing their job. ```notifyAll()``` DOES NOT release the lock.
 
 
 #### Questions to Think
