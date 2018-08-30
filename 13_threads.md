@@ -70,7 +70,7 @@ Thread Scheduler is the part of the JVM (although most of JVMs map Java theads d
 
 
 #### 6. Thread States and Transitions
-<p align="center"><img src="/images/thread_states.png" /></p>
+<p align="center"><img src="https://github.com/VanTamNguyen/LearningJava/blob/master/images/thread_states.png" /></p>
 
 A thread can only be in one of five states:
 * ***New***, a thread is said in *new* state when an instance of java class Thread is created but not yet call ```start()``` method. In this point, it's a live ```Thread``` object but not yet a thread of execution. It's considered not alive.
