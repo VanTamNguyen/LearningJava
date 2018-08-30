@@ -24,9 +24,9 @@
 * **public static void main(String[] args)**
     * **main** is the entry point of Java program, JVM use main to start execution, main will be at the bottom of call stack
     * Legal main signatures for JVM to start execution
-        * **public static void main(String[] args)**
-        * **public static void main(String... args)**
-        * **public static void main(String args[])**
+        * ***public static void main(String[] args)*8*
+        * ***public static void main(String... args)***
+        * ***public static void main(String args[])***
     * All other main methods with different signatures is just a normal method
 
 * **Imports**
