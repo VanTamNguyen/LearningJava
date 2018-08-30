@@ -18,8 +18,17 @@
     * Import and package statments apply for all classes in source code file
     * A source code file can have more than one nonpublic classes
     * Files with no public classes can have the name that does not match any classes in the file
+
 * **javac** and **java** commands
+
 * **public static void main(String[] args)**
+    * **main** is the entry point of Java program, JVM use main to start execution, main will be at the bottom of call stack
+    * Legal main signatures for JVM to start execution
+        * **public static void main(String[] args)**
+        * **public static void main(String... args)**
+        * **public static void main(String args[])**
+    * All other main methods with different signatures is just a normal method
+
 * **Imports**
 * **Static imports**
 * **Modifiers**
