@@ -11,6 +11,13 @@
 
 #### 2. Classes
 * **Source file rules**
+    * There can be only one public class per source code java file
+    * The name of file must match the name of public class
+    * If the class is part of a package, the *package* statement must be the first line of source code file
+    * Import statements must go between package statement and class declaration
+    * Import and package statments apply for all classes in source code file
+    * A source code file can have more than one nonpublic classes
+    * Files with no public classes can have the name that does not match any classes in the file
 * **javac** and **java** commands
 * **public static void main(String[] args)**
 * **Imports**
