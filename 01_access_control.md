@@ -10,6 +10,13 @@
     * Identifiers are case sensitive
 
 #### 2. Classes
+* **Source file rules**
+* **javac** and **java** commands
+* **public static void main(String[] args)**
+* **Imports**
+* **Static imports**
+* **Modifiers**
+
 
 #### 3. Interfaces
 
