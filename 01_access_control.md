@@ -33,6 +33,18 @@
     * Unlike the *include* in C the import statements in Java is just for indicating which class is used => save key strokes
 
 * **Static imports**
+    ```
+    import static java.lang.System.out;
+    import static java.lang.Integer.*;
+    
+    public class TestStaticImport {
+        public static void main(String... args) {
+            out.println(MAX_VALUE);
+            out.println(toHexString(42));
+        }
+    }
+    ```
+
 * **Modifiers**
 
 
