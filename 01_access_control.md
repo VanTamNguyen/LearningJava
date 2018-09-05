@@ -57,15 +57,15 @@ Three modifiers (*private, protected, public*) but four access controlls (*priva
     * **Default Access**, a class with default access has no modifier preceding in its declaration. Default access is *package-level* access. Meaning a class with default access can be seen by only classes in the same package.
     * **Public Access**, a class with public access has *public* modifier preceding in its declaration. All classes in Java Universe can see the public class.
     * **Private Access**, *private* modifier. A private class can be seen by only itself.
-    * **Protected Access**, *protected* modifier. A protected class can be seen by classes in the same package and its subclass.
+    * **Protected Access**, *protected* modifier. A protected class can be seen by classes in the same package and its subclass.<br/>
 
 
-    | **Modifier** | **Class** | **Package** | **Subclass** | **World** |
-    | --- | --- | --- | --- | --- |
-    | public | Y | Y | Y | Y |
-    | protected | Y | Y | Y | N |
-    | no modifier (default) | Y | Y | N | N |
-    | private | Y | N | N | N |
+       | **Modifier** | **Class** | **Package** | **Subclass** | **World** |
+       | --- | --- | --- | --- | --- |
+       | public | Y | Y | Y | Y |
+       | protected | Y | Y | Y | N |
+       | no modifier (default) | Y | Y | N | N |
+       | private | Y | N | N | N |
 
 #### 3. Interfaces
 
