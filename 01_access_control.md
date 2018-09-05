@@ -57,7 +57,9 @@ Three modifiers (*private, protected, public*) but four access controlls (*priva
     * **Default Access**, a class with default access has no modifier preceding in its declaration. Default access is *package-level* access. Meaning a class with default access can be seen by only classes in the same package.
     * **Public Access**, a class with public access has *public* modifier preceding in its declaration. All classes in Java Universe can see the public class.
     * **Private Access**, *private* modifier. A private class can be seen by only itself.
-    * **Protected Access**, *protected* modifier. A protected class can be seen by classes in the same package and its subclass.<br/>
+    * **Protected Access**, *protected* modifier. A protected class can be seen by classes in the same package and its subclass.
+    * **Final Class**, when the keyword *final* is used in class declarations, it means the class CANNOT be subclassed any more. In other words, no class can extend the final class
+     * **Abstract Class**<br/>, keyword *abstact* in class declaration. An abstract class CANNOT be instantiated. Its sole purpose is to be extended.
 
 
        | **Modifier** | **Class** | **Package** | **Subclass** | **World** |
@@ -66,6 +68,7 @@ Three modifiers (*private, protected, public*) but four access controlls (*priva
        | protected | Y | Y | Y | N |
        | no modifier (default) | Y | Y | N | N |
        | private | Y | N | N | N |
+
 
 #### 3. Interfaces
 
