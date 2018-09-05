@@ -30,6 +30,8 @@
     * All other main methods with different signatures is just a normal method
 
 * **Imports**
+    * Unlike the *include* in C the import statements in Java is just for indicating which class is used => save key strokes
+
 * **Static imports**
 * **Modifiers**
 
