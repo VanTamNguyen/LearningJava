@@ -48,8 +48,12 @@
     * You can do an static import on *static* object references, constants and methods
     * If you import two static members of two classes which have same name then you will encounter the compilation error
 
-* **Modifiers**
-
+* **Modifiers**<br/>
+Three modifiers (*private, protected, public*) but four access controlls (*private, package, subclass, public*).<br/>
+    * **Class Access**, what does it mean to access a class? When we say class A has access to class B it means class A can do the following things:
+        * Create an instance of class B
+        * Extend class B
+        * Access certain methods or variables within class B, depend on the access controls of those methods and variables
 
 #### 3. Interfaces
 
