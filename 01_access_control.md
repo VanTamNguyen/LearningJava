@@ -44,6 +44,9 @@
         }
     }
     ```
+    * In code you must use *import static* NOT *static import*
+    * You can do an static import on *static* object references, constants and methods
+    * If you import two static members of two classes which have same name then you will encounter the compilation error
 
 * **Modifiers**
 
