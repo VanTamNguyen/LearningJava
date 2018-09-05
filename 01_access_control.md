@@ -61,7 +61,7 @@ Three modifiers (*private, protected, public*) but four access controlls (*priva
 
 
        | **Modifier** | **Class** | **Package** | **Subclass** | **World** |
-       | :---: | :---: | :---: | :---: | :---: |
+       | :--- | :---: | :---: | :---: | :---: |
        | public | Y | Y | Y | Y |
        | protected | Y | Y | Y | N |
        | no modifier (default) | Y | Y | N | N |
