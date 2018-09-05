@@ -54,6 +54,10 @@ Three modifiers (*private, protected, public*) but four access controlls (*priva
         * Create an instance of class B
         * Extend class B
         * Access certain methods or variables within class B, depend on the access controls of those methods and variables
+    * **Default Access**, a class with default access has no modifier preceding in its declaration. Default access is *package-level* access. Meaning a class with default access can be seen by only classes in the same package.
+    * **Public Access**, a class with public access has *public* modifier preceding in its declaration. All classes in Java Universe can see the public class.
+    * **Private Access**
+    * **Protected Access**
 
 #### 3. Interfaces
 
