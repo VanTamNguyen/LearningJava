@@ -59,7 +59,7 @@ Three modifiers (*private, protected, public*) but four access controlls (*priva
     * **Private Access**, *private* modifier. A private class can be seen by only itself.
     * **Protected Access**, *protected* modifier. A protected class can be seen by classes in the same package and its subclass.
     * **Final Class**, when the keyword *final* is used in class declarations, it means the class CANNOT be subclassed any more. In other words, no class can extend the final class
-     * **Abstract Class**<br/>, keyword *abstact* in class declaration. An abstract class CANNOT be instantiated. Its sole purpose is to be extended.
+     * **Abstract Class**, keyword *abstact* in class declaration. An abstract class CANNOT be instantiated. Its sole purpose is to be extended.<br/>
 
 
        | **Modifier** | **Class** | **Package** | **Subclass** | **World** |
