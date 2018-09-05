@@ -59,6 +59,14 @@ Three modifiers (*private, protected, public*) but four access controlls (*priva
     * **Private Access**, *private* modifier. A private class can be seen by only itself.
     * **Protected Access**, *protected* modifier. A protected class can be seen by classes in the same package and its subclass.
 
+
+    | **Modifier** | **Class** | **Package** | **Subclass** | **World** |
+    | --- | --- | --- | --- | --- |
+    | public | Y | Y | Y | Y |
+    | protected | Y | Y | Y | N |
+    | no modifier (default) | Y | Y | N | N |
+    | private | Y | N | N | N |
+
 #### 3. Interfaces
 
 #### 4. Class Members
