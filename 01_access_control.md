@@ -36,7 +36,7 @@
     ```
     import static java.lang.System.out;
     import static java.lang.Integer.*;
-    
+
     public class TestStaticImport {
         public static void main(String... args) {
             out.println(MAX_VALUE);
@@ -71,6 +71,7 @@ Three modifiers (*private, protected, public*) but four access controlls (*priva
 
 
 #### 3. Interfaces
+*Interface* is a contract for what class can do without saying anything how class can do it. Think of interface as an 100% abstract class.
 
 #### 4. Class Members
 
