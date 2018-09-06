@@ -73,10 +73,10 @@ Three modifiers (*private, protected, public*) but four access controlls (*priva
 #### 3. Interfaces
 **Interface** is a contract for what class can do without saying anything how class can do it. Think of interface as an 100% abstract class. Rules for defining methods and variables in interface:
 * All interfaces methods are implicitly *public* and *abstract*, meaning you don't need to type *public abstract* but the methods are always *public Abstract*
-* All variables in interface must be *public static final*, meaning you only can define constants in interfaces NOT instance variables
+* All variables in interface must be *public static final*, meaning you only can define constants in interfaces NOT instance variables. Even if you don't type *public static final* the variables in interfaces are still *public static final*
 * Interfaces methods must NOT be *static*
 * Because interface methods are abstract they cannot be marked *final, strictfp, native*
-* An interface can extend one or more other interfaces
+* An interface can extend one or more other interfaces (NOTE: interface can extend multiple interfaces, class can extend only one class)
 * An interface cannot extend anything but another interface
 * An interface cannot implement another interface or class
 
