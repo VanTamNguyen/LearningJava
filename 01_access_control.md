@@ -82,4 +82,28 @@ Three modifiers (*private, protected, public*) but four access controlls (*priva
 
 #### 4. Class Members
 
+
 #### 5. Enums
+* An **enum** specifies a list of constant values assigned to enum type
+* An **enum** is NOT a String or int, enum constant's type is enum type
+* Enum can be declared inside or outside class but NOT inside method
+* Enum declared outside class MUST NOT be marked *static, final, abstract, protected, private*
+* Enum can contain constructors, methods, variables, constants
+* Enum constants can send arguments to enum constructors
+    ```
+    enum Size {
+        SMALL(5), BIG(10), HUGE(20);
+
+        private int size;
+
+        Size(int size) {
+            this.size = size;
+        }
+
+        public int getSize() {
+            return this.size;
+        }
+    }
+    ```
+* Enum constructors can NEVER invoked directly in code. They are always called when enum is initialized
+* Evey enums has static method ```values()``` returns list of enum constants
