@@ -38,3 +38,4 @@ Why study ```hashCode()``` and ```equals()``` here? Cause they are essential to 
 
 
 #### 4. Generic Type
+[Oracle Tutorial](https://docs.oracle.com/javase/tutorial/java/generics/why.html)
