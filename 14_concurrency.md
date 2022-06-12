@@ -99,7 +99,7 @@ To ultilize the CPU we need to control how many threads are created. So we need 
     Executor executor = // some implementations of Executor
     executor.execute(task);
 
-* **Executor** is used to execute the run method in a runnable instance. By coding to the ```Executor``` interface we can provide some threading approaches like these:
+* **Executor** is used to execute the run method in a runnable instance. By implementing to the ```Executor``` interface we can provide some threading approaches like these:
     * Not starting any thread at all (task is run in the calling thread)
         ```
         public class SingleThreadExecutor implements Executor {
